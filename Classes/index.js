@@ -7,13 +7,14 @@ const author = {
         },
 
         printBooks1(){
-            funtion printValue(book){
+            function printValue(book){
             document.write(book + ` by ` + this.fullName + `<br>`);
         }
 
         this.books.forEach(printValue);
     }
 };
+
 
 author.printBooks();
 author.printBooks1();
