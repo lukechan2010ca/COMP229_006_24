@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function ContactForm() {
+const ContactForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
