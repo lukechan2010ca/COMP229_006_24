@@ -1,4 +1,3 @@
-import React from 'react';
 import mypicture from "../assets/Luke.jpg"
 
 const About = () =>{
