@@ -5,7 +5,7 @@ const Footer = () => {
             <br/>
             <br/>
             <footer>
-                <p className="text-muted text-center">&copy;&nbsp;Copyright Julio Vinicius A. de Carvalho - COMP229 Web Application Development</p>
+                <p className="text-muted text-center">&copy;&nbsp;Copyright Chi WO Chan, Luke - COMP229 Web Application Development</p>
             </footer>
         </div>
     );
