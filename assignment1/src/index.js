@@ -1,3 +1,10 @@
+// 
+// File Name: index.js
+// Student's Name: Chi Wo Chan, Luke
+// Student ID: 301369595
+// Date: 28/9/2024
+// 
+
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";

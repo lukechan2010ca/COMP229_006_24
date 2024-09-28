@@ -1,3 +1,11 @@
+// 
+// File Name: index.js
+// Student's Name: Chi Wo Chan, Luke
+// Student ID: 301369595
+// Date: 28/9/2024
+// 
+
+// Section: services data Definition
 const services = [
   {
     title: 'Web Development',
@@ -21,6 +29,7 @@ const services = [
   },
 ];
 
+// Section: Services component Definition
 const Services = () => {
     return (
       <div className="services">
@@ -38,4 +47,5 @@ const Services = () => {
     );
 };
 
+// Section: export component
 export default Services;

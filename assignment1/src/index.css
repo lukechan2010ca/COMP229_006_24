@@ -1,8 +1,17 @@
+/* 
+File Name: index.css
+Student's Name: Chi Wo Chan, Luke
+Student ID: 301369595
+Date: 28/9/2024
+*/
+
+/* Global Styles */
 html {
   position: relative;
   min-height: 100%;
 }
 
+/* Footer Styles */
 footer {
   position: fixed;
   left: 0;
@@ -14,10 +23,12 @@ footer {
   font-size: small;
 }
 
+/* Navigation Styles */
 .nav-item{
   margin-right: 0.5em;
 }
 
+/* Body Styles */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -25,72 +36,6 @@ body {
   background-color: snow;
 }
 
-.about {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.about-text{
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.about-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f4f4f4;
-  border-radius: 4px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.home{
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.projects{
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.contact{
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.services{
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  margin-left: 1em;
-  margin-right: 1em;
-}
 
 /* Header styles */
 .header {
@@ -145,8 +90,9 @@ body {
 }
 
 h1 {
+  padding-top: 1rem;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: goldenrod;
   text-align: left;
@@ -162,10 +108,175 @@ h2 {
 h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: darkcyan;
   text-align: left;
   text-shadow: 2px 2px 2px silver;
+}
+
+/* Home page styles */
+.home{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.home h1{
+  font-size: 2.5rem;
+  margin: 1rem;
+  padding: 1em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:goldenrod;
+  text-align: center;
+}
+
+.home span{
+  color: goldenrod;
+  font-style: italic;
+}
+
+.home h3{
+  font-size: 1.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: darkcyan;
+  text-align: left;
+}
+
+
+.mission {
+  background-color: #f4f4f4; 
+  padding: 1rem; 
+  font-style: italic; 
+  color: #333; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s, box-shadow 0.3s; 
+  border-radius: 4px; 
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeInUp 0.5s forwards; 
+}
+
+/* Hover Effect */
+.mission:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.quote {
+  padding: 10px 15px; 
+  margin: 20px 0; 
+  font-style: italic; 
+  font-size: 0.8rem; 
+  color: #333; 
+  transition: transform 0.3s, box-shadow 0.3s; 
+  border-radius: 8px; 
+  opacity: 0; 
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards; 
+  text-align: right;
+}
+
+/* Entrance Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End position */
+  }
+}
+
+/* about page styles */
+.about {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+
+.about-text{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  width: 60%;
+}
+
+.about-text p{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.skills{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 1rem;
+  color: #333; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s, box-shadow 0.3s; 
+  border-radius: 4px; 
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeInUp 0.5s forwards; 
+}
+/* Hover Effect */
+.about-content:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.about ul{
+  text-align: left;
+}
+
+.about li{
+  list-style: none;
+}
+
+/* projects page styles */
+.projects{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* contact page styles */
+.contact{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* services page styles */
+.services{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 /* Button styles */
@@ -211,22 +322,47 @@ h3 {
   background-color: #f4f4f4;
   border-radius: 4px;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
   margin-bottom: 1em;
+  transition: transform 0.3s, box-shadow 0.3s; 
+  border-radius: 4px; 
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeInUp 0.5s forwards; 
 }
 
-.mission {
-  background-color: #f4f4f4;
-  border-radius: 4px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1em;
+.card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
 }
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card h2{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: darkcyan;
+  text-align: left;
+}
+
+.card p{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
 
 /* Form styles */
 .form-group {
   margin-bottom: 1rem;
-
 }
 
 .form-group label {
@@ -234,6 +370,28 @@ h3 {
   margin-bottom: 0.5rem;
   text-align: left;
   padding-left: 0.5rem;
+}
+
+/* Contact form styles */
+.contact-form{
+  background-color:antiquewhite; 
+  padding: 1rem; 
+  font-style: italic; 
+  color: #333; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s, box-shadow 0.3s; 
+  border-radius: 4px; 
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeInUp 0.5s forwards;
+  margin: 0 auto; 
+  max-width: 500px;
+  text-align: center; 
+}
+
+.contact-form:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
 }
 
 .form-group input,

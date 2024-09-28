@@ -1,115 +1,60 @@
-import React, { useState } from 'react';
+// 
+// File Name: index.js
+// Student's Name: Chi Wo Chan, Luke
+// Student ID: 301369595
+// Date: 28/9/2024
+// 
+
+// Section: import modules and components
 import { useNavigate } from 'react-router-dom';
 
+// Section: ContactForm component Definition
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // Get the form data
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData.entries());
+  
+  // Log the form data
+  console.log(data);
 
-    try {
-      // Here you would typically send the form data to a server
-      // For now, we'll simulate an API call with a timeout
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      console.log('Form submitted:', formData);
-      
-      // Clear the form
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: '',
-      });
+  // Redirect to the home page
+  navigate('/');
+}
 
-      // Show a success message (you might want to use a more sophisticated notification system)
-      alert('Thank you for your message. I will get back to you soon!');
-
-      // Redirect to home page after form submission
-      navigate('/');
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting the form. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
+// Return the form
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
+    <form className="contact-form" onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="firstName">First Name</label>
-        <input
-          type="text"
-          id="firstName"
-          name="firstName"
-          value={formData.firstName}
-          onChange={handleChange}
-          required
-        />
+        <input type="text" id="firstName" name="firstName" required />
       </div>
       <div className="form-group">
         <label htmlFor="lastName">Last Name</label>
-        <input
-          type="text"
-          id="lastName"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
-          required
-        />
+        <input type="text" id="lastName" name="lastName" required />
       </div>
       <div className="form-group">
         <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        <input type="email" id="email" name="email" required />
       </div>
       <div className="form-group">
         <label htmlFor="phone">Phone (optional)</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-        />
+        <input type="tel" id="phone" name="phone" />
       </div>
       <div className="form-group">
         <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-          rows="4"
-        ></textarea>
+        <textarea id="message" name="message" required rows="4"></textarea>
       </div>
-      <button type="submit" className="btn" disabled={isSubmitting}>
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+      <button type="submit" className="btn">
+        Send Message
       </button>
     </form>
   );
-}
+};
 
+// Section: export component
 export default ContactForm;
