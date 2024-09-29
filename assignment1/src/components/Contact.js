@@ -28,7 +28,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-form-outter">
-          <h3>Send Me a Message</h3>
+          <h3>Leave a Message</h3>
           <ContactForm />
         </div>
       </div>
