@@ -36,7 +36,6 @@ body {
   background-color: snow;
 }
 
-
 /* Header styles */
 .header {
   background-color: #333;
@@ -106,14 +105,12 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
-  padding-left: 1rem;
   padding-top: 1rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: darkcyan;
   text-align: left;
-  text-shadow: 2px 2px 2px silver;
 }
 
 /* Home page styles */
@@ -266,10 +263,12 @@ h3 {
 .contact{
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  text-align: center;
+  text-align: left;
   margin-left: 1em;
   margin-right: 1em;
 }
+
+
 
 /* services page styles */
 .services{
@@ -379,7 +378,6 @@ h3 {
   padding: 1rem; 
   font-style: italic; 
   color: #333; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
   transition: transform 0.3s, box-shadow 0.3s; 
   border-radius: 4px; 
   opacity: 0; 
@@ -390,9 +388,22 @@ h3 {
   text-align: center; 
 }
 
+.contact-form-outter{
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 1rem;
+  color: #333; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  margin-bottom: 1em;
+  transition: transform 0.3s, box-shadow 0.3s; 
+  border-radius: 4px; 
+  opacity: 0; 
+  transform: translateY(20px); 
+  animation: fadeInUp 0.5s forwards; 
+}
+
 .contact-form:hover {
   transform: translateY(-5px); 
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); 
 }
 
 .form-group input,
