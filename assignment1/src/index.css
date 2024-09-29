@@ -146,7 +146,8 @@ h3 {
 
 .mission {
   background-color: #f4f4f4; 
-  padding: 1rem; 
+  padding: 1rem;
+  margin: 1em;
   font-style: italic; 
   color: #333; 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
