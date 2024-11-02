@@ -11,6 +11,5 @@ const NotFound = () => {
     return <h1>404 page not found</h1>;
 };
 
-
 // Section: export component
 export default NotFound;
